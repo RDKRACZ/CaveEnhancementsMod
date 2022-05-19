@@ -4,7 +4,6 @@ import com.exdrill.ce.registry.*;
 import com.exdrill.ce.world.biome.CaveEnhancementsRegion;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-import terrablender.api.RegionType;
 import terrablender.api.Regions;
 import terrablender.api.TerraBlenderApi;
 
@@ -25,7 +24,7 @@ public class CaveEnhancements implements ModInitializer, TerraBlenderApi {
 
     @Override
     public void onTerraBlenderInitialized() {
-        Regions.register(new CaveEnhancementsRegion(new Identifier(NAMESPACE, "cave_enhancements"), RegionType.OVERWORLD, 1));
+        Regions.register(new CaveEnhancementsRegion(new Identifier(NAMESPACE, "cave_enhancements"), 1));
     }
 
     public static final Identifier PacketID = new Identifier(CaveEnhancements.NAMESPACE, "spawn_packet");
