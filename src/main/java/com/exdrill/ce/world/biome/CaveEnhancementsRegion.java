@@ -6,7 +6,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.biome.source.util.MultiNoiseUtil;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
@@ -23,8 +22,8 @@ public class CaveEnhancementsRegion extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            builder.replaceBiome(BiomeKeys.DRIPSTONE_CAVES, ModBiomes.GOOP_CAVES_KEY);
-            builder.replaceBiome(BiomeKeys.LUSH_CAVES, ModBiomes.ROSE_QUARTZ_CAVES_KEY);
+            builder.replaceBiome(ModBiomes.GOOP_CAVES_KEY, ModBiomes.GOOP_CAVES_KEY);
+            builder.replaceBiome(ModBiomes.ROSE_QUARTZ_CAVES_KEY, ModBiomes.ROSE_QUARTZ_CAVES_KEY);
         });
     }
 
